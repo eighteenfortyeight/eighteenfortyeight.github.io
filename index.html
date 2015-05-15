@@ -14,6 +14,10 @@
         font-weight: normal;
       }
 
+      #container{
+        min-height: 700px;
+      }
+
       img{
         margin-bottom: 50px;
         width: 600px;
@@ -36,14 +40,16 @@
 
       footer{
         text-align: left;
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        bottom: -5px;
         height: 200px;
         background: #ccc;
         width: 100%;
         display: table;
         font-size: 12px;
         line-height: 18px;
+        margin: 0;
+        padding: 0;
       }
 
       footer .left{
@@ -87,7 +93,9 @@
       </div>
     </header>
 
-    <img src='new_logo.jpg'>
+    <div id='container'>
+      <img src='new_logo.jpg'>
+    </div>
 
     <footer>
       <div class='left'>
