@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width">
     <title>Eighteen FortyEight</title>
     <style type="text/css" media="all">
+      * {
+        margin: 0;
+      }
+      html, body {
+        height: 100%;
+      }
+      .page-wrap {
+        min-height: 100%;
+        /* equal to footer height */
+        margin-bottom: -142px;
+      }
+      .page-wrap:after {
+        content: "";
+        display: block;
+      }
+      .site-footer, .page-wrap:after {
+        height: 142px;
+      }
+
       body{
         text-align: center;
-        padding: 0;
-        margin: 0;
-        padding-top: 100px;
         font-family: 'helvetica', 'sans-serif';
         font-weight: normal;
       }
@@ -23,6 +39,7 @@
         width: 600px;
         position: relative;
         left: 28px;
+        margin-top: 100px;
       }
 
       h1{
@@ -40,8 +57,8 @@
 
       footer{
         text-align: left;
-        position: relative;
-        bottom: -5px;
+        /*position: relative;
+        bottom: -5px;*/
         height: 200px;
         background: #ccc;
         width: 100%;
@@ -93,11 +110,11 @@
       </div>
     </header>
 
-    <div id='container'>
+    <div class='page-wrap'>
       <img src='new_logo.jpg'>
     </div>
 
-    <footer>
+    <footer class='site-footer'>
       <div class='left'>
         PO Box 260049
         <br>
